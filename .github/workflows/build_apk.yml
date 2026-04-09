@@ -26,6 +26,9 @@ jobs:
       - name: Create native project files
         run: flutter create .
 
+      - name: Remove default widget test
+        run: rm -f test/widget_test.dart
+
       - name: Analyze code
         run: flutter analyze
 
@@ -61,6 +64,9 @@ jobs:
 
       - name: Create native project files
         run: flutter create .
+
+      - name: Remove default widget test
+        run: rm -f test/widget_test.dart
 
       - name: Build APK
         run: flutter build apk --split-per-abi --release
