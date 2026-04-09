@@ -1,0 +1,10 @@
+**/*.jpg
+**/*.kt
+**/local.properties
+**/.settings/
+**/.classpath
+**/.project
+**/build/
+**/gradle-wrapper.jar
+**/.idea/
+**/gen
