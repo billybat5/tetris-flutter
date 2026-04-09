@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tetris_flutter/controllers/game_bloc.dart';
 import 'package:tetris_flutter/controllers/game_events.dart';
+import 'package:tetris_flutter/controllers/game_state.dart';
 import 'package:tetris_flutter/views/game_screen.dart';
 import 'package:tetris_flutter/utils/constants.dart';
 

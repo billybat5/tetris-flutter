@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:tetris_flutter/utils/constants.dart';
 
 enum TetrominoType { I, O, T, S, Z, J, L }

@@ -4,13 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tetris_flutter/controllers/game_events.dart';
 import 'package:tetris_flutter/controllers/game_state.dart';
 import 'package:tetris_flutter/models/tetromino.dart';
-import 'package:tetris_flutter/models/board.dart';
 import 'package:tetris_flutter/utils/constants.dart';
 
 class GameBloc extends Bloc<GameEvent, GameState> {
   Timer? _timer;
 
-  GameBloc() : super(const GameState()) {
+  GameBloc() : super(GameState.initial()) {
     on<GameStarted>(_onGameStarted);
     on<GamePaused>(_onGamePaused);
     on<GameResumed>(_onGameResumed);
@@ -63,7 +62,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
 
   void _onGameReset(GameReset event, Emitter<GameState> emit) {
     _stopTimer();
-    emit(const GameState());
+    emit(GameState.initial());
   }
 
   void _onTetrominoMoved(TetrominoMoved event, Emitter<GameState> emit) {

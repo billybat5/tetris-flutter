@@ -51,7 +51,7 @@ class PiecePreviewPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final cellSize = 15.0;
+    const cellSize = 15.0;
     final offsetX = (size.width - tetromino.shape[0].length * cellSize) / 2;
     final offsetY = (size.height - tetromino.shape.length * cellSize) / 2;
 

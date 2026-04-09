@@ -40,7 +40,7 @@ class GameBoard extends StatelessWidget {
           color: Constants.secondaryColor,
         ),
         child: CustomPaint(
-          size: Size(
+          size: const Size(
             Constants.boardWidth * Constants.cellSize,
             Constants.boardHeight * Constants.cellSize,
           ),

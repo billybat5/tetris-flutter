@@ -1,5 +1,4 @@
 import 'package:tetris_flutter/models/tetromino.dart';
-import 'package:tetris_flutter/utils/constants.dart';
 
 class Board {
   final List<List<String?>> grid;

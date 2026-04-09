@@ -15,7 +15,7 @@ class GameState extends Equatable {
   final GameStatus status;
 
   const GameState({
-    this.board = const Board(width: Constants.boardWidth, height: Constants.boardHeight),
+    required this.board,
     this.currentTetromino,
     this.nextTetromino,
     this.score = 0,
@@ -23,6 +23,15 @@ class GameState extends Equatable {
     this.lines = 0,
     this.status = GameStatus.initial,
   });
+
+  GameState.initial()
+      : board = Board(width: Constants.boardWidth, height: Constants.boardHeight),
+        currentTetromino = null,
+        nextTetromino = null,
+        score = 0,
+        level = 1,
+        lines = 0,
+        status = GameStatus.initial;
 
   GameState copyWith({
     Board? board,
@@ -51,5 +60,5 @@ class GameState extends Equatable {
   }
 
   @override
-  List<Object?> get props => [board, currentTetromino, nextTetromino, score, level, lines, status];
+  List<Object?> get props => [board.grid, currentTetromino, nextTetromino, score, level, lines, status];
 }
