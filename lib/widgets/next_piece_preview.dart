@@ -69,7 +69,7 @@ class PiecePreviewPainter extends CustomPainter {
           canvas.drawRect(rect, paint);
           
           final borderPaint = Paint()
-            ..color = Colors.white.withOpacity(0.5)
+            ..color = Colors.white.withValues(alpha: 0.5)
             ..style = PaintingStyle.stroke
             ..strokeWidth = 1;
           canvas.drawRect(rect, borderPaint);

@@ -82,17 +82,17 @@ class BoardPainter extends CustomPainter {
           
           // Draw border
           final borderPaint = Paint()
-            ..color = Colors.white.withOpacity(0.3)
+            ..color = Colors.white.withValues(alpha: 0.3)
             ..style = PaintingStyle.stroke
             ..strokeWidth = 1;
           canvas.drawRect(rect, borderPaint);
         } else {
           final paint = Paint()..color = Colors.transparent;
           canvas.drawRect(rect, paint);
-          
+
           // Draw grid lines
           final gridPaint = Paint()
-            ..color = Colors.white.withOpacity(0.1)
+            ..color = Colors.white.withValues(alpha: 0.1)
             ..style = PaintingStyle.stroke
             ..strokeWidth = 0.5;
           canvas.drawRect(rect, gridPaint);
@@ -121,7 +121,7 @@ class BoardPainter extends CustomPainter {
               canvas.drawRect(rect, paint);
               
               final borderPaint = Paint()
-                ..color = Colors.white.withOpacity(0.5)
+                ..color = Colors.white.withValues(alpha: 0.5)
                 ..style = PaintingStyle.stroke
                 ..strokeWidth = 1;
               canvas.drawRect(rect, borderPaint);
