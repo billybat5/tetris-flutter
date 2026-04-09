@@ -52,7 +52,8 @@ void main() {
       final board = Board(width: Constants.boardWidth, height: Constants.boardHeight);
       final tetromino = Tetromino.create(TetrominoType.T);
       board.placeTetromino(tetromino);
-      expect(board.grid[0][4], 'T');
+      // T shape has the center of the T at row 1 of its shape, so grid[1][4] should be 'T'
+      expect(board.grid[1][4], 'T');
     });
 
     test('Line full detection should work', () {
